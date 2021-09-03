@@ -20,11 +20,11 @@ import ListItem from "../ListItem";
 function List({ list, deleteListItem }) {
   return (
     <ul>
-      {list.map((item) => {
+      {list.map((item, index) => {
         return (
           <ListItem
-            key={item.id}
-            text={item.text}
+            index={index}
+            text={item}
             deleteListItem={deleteListItem}
           />
         );

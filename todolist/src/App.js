@@ -6,7 +6,7 @@ import List from "./components/List";
 
 function App() {
   const startArray = [];
-  const [list, setList] = useState([startArray]);
+  const [list, setList] = useState([]);
   const [text, setText] = useState();
 
   // needs a handleChange function ✔️
@@ -16,14 +16,18 @@ function App() {
 
   function addToList(text) {
     console.log("added to list");
-    setList([...list, { text: text, id: list.length }]);
+    setList([...list, text]);
     console.log(list);
   }
 
   // needs a delete function. ✔️
   function deleteListItem(index) {
+    const newList = [...list];
+    newList.splice(index, 1);
+    setList(newList);
+
     console.log("deleted from list");
-    setList([...list.slice(0, index), ...list.slice(index + 1)]);
+    console.log(list);
   }
 
   return (

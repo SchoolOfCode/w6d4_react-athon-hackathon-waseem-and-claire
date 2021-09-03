@@ -35,8 +35,10 @@ function Input({ text, handleChange, addToList }) {
         }}
       />
       <button
-        onClick={() => {
+        onClick={(event) => {
+          event.preventDefault();
           addToList(text);
+      
         }}
       >
         Add to list!
