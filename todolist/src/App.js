@@ -5,7 +5,8 @@ import List from "./components/List";
 // import List from "../List";
 
 function App() {
-  const [list, setList] = useState([]);
+  const startArray = [];
+  const [list, setList] = useState([startArray]);
   const [text, setText] = useState();
 
   // needs a handleChange function ✔️
@@ -15,7 +16,8 @@ function App() {
 
   function addToList(text) {
     console.log("added to list");
-    setList([...list, text]);
+    setList([...list, { text: text, id: list.length }]);
+    console.log(list);
   }
 
   // needs a delete function. ✔️

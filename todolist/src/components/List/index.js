@@ -21,7 +21,13 @@ function List({ list, deleteListItem }) {
   return (
     <ul>
       {list.map((item) => {
-        return <ListItem text={item} deleteListItem={deleteListItem} />;
+        return (
+          <ListItem
+            key={item.id}
+            text={item.text}
+            deleteListItem={deleteListItem}
+          />
+        );
       })}
     </ul>
   );
