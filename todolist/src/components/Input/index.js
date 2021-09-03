@@ -1,16 +1,16 @@
 /* Plan.
-import useState from react
+import  react ✔️
     import css later
-export Input component
+export Input component ✔️
 
-define function Input
-    take in {text, handleChange}
-state of text to be changed to the input text
-    test setText useState
+define function Input ✔️
+    take in {text, handleChange} ✔️
+state of text to be changed to the input text ✔️
+   
 
-within Input function, define 'add' function.
-    add function should take in {text} from input.
-    spread listArray and add to the end.
+within Input function, define 'add' function.✔️
+    add function should take in {text} from input.✔️
+    spread listArray and add to the end.✔️
 
 return
     input tag
@@ -24,3 +24,19 @@ return
 
 export the list array?!
 */
+
+import React from "react"
+import listArray from "../../listData"
+
+
+function Input({ text, handleChange, addToList }) {
+   
+    return <form>
+        <input value={text} onChange={(e)=>{handleChange(e.target.value)}}/>
+        <button onClick={()=>{addToList(listArray, text )}}>Add to list!</button>
+    </form>
+    
+}
+
+
+export default Input

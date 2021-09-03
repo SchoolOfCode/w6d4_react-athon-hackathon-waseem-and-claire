@@ -1,26 +1,29 @@
-import logo from "./logo.svg";
+import React, { useState } from "react";
 import "./App.css";
+import Input from  "./components/Input";
+// import List from "../List";
+import listArray from "./listData"
+function App() {
+  
+  const newList =[]
+  const [text, setText] = useState()
+  
+  // needs a handleChange function ✔️
+  function handleChange (userInput) {
+    setText(userInput);
+  }
 
-// needs a handleChange function
+  function addToList(listArray, text){
+    return newList = [...listArray, text];
+}
+
 // needs a delete function.
 
-function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1>To-Do List</h1>
+      <Input text={text} handleChange={handleChange} addToList={addToList} />
     </div>
   );
 }
