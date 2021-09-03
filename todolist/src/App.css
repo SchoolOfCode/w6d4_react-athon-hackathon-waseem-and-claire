@@ -1,0 +1,100 @@
+body {
+  background-color: #a56ce6;
+  text-align: center;
+  font-size: 25px;
+}
+
+h1 {
+  font-size: 3em;
+  color: #dffdff;
+}
+
+.theListItem {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 40px;
+  justify-content: center;
+  /* margin-left: 500px; */
+  /* background-color:#68EDC6; */
+  /* padding: left 40px;
+padding: right: 10px; */
+}
+
+.deleteButton {
+  border: 3px solid #ffa69e;
+  background: none;
+  color: black;
+  padding: 10px 10px;
+  margin-left: 40%;
+  margin-right: 40%;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+}
+.deleteButton:hover {
+  color: #0d1321;
+}
+.deleteButton:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffa69e;
+  z-index: -1;
+  border-radius: 50% 50% 0% 0%;
+  height: 0%;
+  transition: all 0.5s;
+}
+.deleteButton:hover:before {
+  height: 190%;
+}
+
+.addItem {
+  border: 3px solid #68edc6;
+  background: none;
+  color: black;
+  padding: 10px 10px;
+  margin-left: 40%;
+  margin-right: 40%;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.5s;
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+}
+.addItem:hover {
+  color: #0d1321;
+}
+.addItem:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #68edc6;
+  z-index: -1;
+  border-radius: 50% 50% 0% 0%;
+  height: 0%;
+  transition: all 0.5s;
+}
+.addItem:hover:before {
+  height: 190%;
+}
+
+#inputBox {
+  font-size: 25px;
+}
