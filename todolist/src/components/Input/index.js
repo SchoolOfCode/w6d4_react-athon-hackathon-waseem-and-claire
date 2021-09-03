@@ -23,18 +23,26 @@ return✔️
     inside a form tag. ✔️
 */
 
-import React from "react"
-
-
+import React from "react";
 
 function Input({ text, handleChange, addToList }) {
-   
-    return <form>
-        <input value={text} onChange={(e)=>{handleChange(e.target.value)}}/>
-        <button onClick={()=>{addToList(text )}}>Add to list!</button>
+  return (
+    <form>
+      <input
+        value={text}
+        onChange={(e) => {
+          handleChange(e.target.value);
+        }}
+      />
+      <button
+        onClick={() => {
+          addToList(text);
+        }}
+      >
+        Add to list!
+      </button>
     </form>
-    
+  );
 }
 
-
-export default Input
+export default Input;

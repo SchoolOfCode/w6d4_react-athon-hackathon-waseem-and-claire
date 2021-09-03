@@ -1,18 +1,30 @@
 /* Plan.
 Only job of list is to put all list array items into a ul.
 
-import useState from react
+import react✔️
     import css later
-export Input component
+export Input component✔️
 
-definte function List.
-    takes in listArray and delete function.
-
-    creates new different list array using delete function if necessary
-    use spread and split to delete the correct list item.
+definte function List.✔️
+    takes in listArray .✔️
 
     returns
-        each item from new list in a ul.
-            array.map.
-            return ul with the text in.
+        each item from new list in a ul.✔️
+            array.map.✔️
+            return ul with the text in.✔️
 */
+
+import React from "react";
+import ListItem from "../ListItem";
+
+function List({ list, deleteListItem }) {
+  return (
+    <ul>
+      {list.map((item) => {
+        return <ListItem text={item} deleteListItem={deleteListItem} />;
+      })}
+    </ul>
+  );
+}
+
+export default List;

@@ -1,35 +1,34 @@
 import React, { useState } from "react";
 import "./App.css";
-import Input from  "./components/Input";
-import ListItem from "./components/ListItem"
+import Input from "./components/Input";
+import List from "./components/List";
 // import List from "../List";
 
-
 function App() {
-  
-  const newList =[]
-  const [list,setList] = useState ([])
-  const [text, setText] = useState()
-  
+  const [list, setList] = useState([]);
+  const [text, setText] = useState();
+
   // needs a handleChange function ✔️
-  function handleChange (userInput) {
+  function handleChange(userInput) {
     setText(userInput);
   }
 
-  function addToList(text){
+  function addToList(text) {
+    console.log("added to list");
     setList([...list, text]);
-}
+  }
 
-// needs a delete function.
-function deleteListItem (index){
-setList ([...list.slice(0,index), ...list.slice(index + 1)])
-}
+  // needs a delete function. ✔️
+  function deleteListItem(index) {
+    console.log("deleted from list");
+    setList([...list.slice(0, index), ...list.slice(index + 1)]);
+  }
 
   return (
     <div className="App">
-        <h1>To-Do List</h1>
+      <h1>To-Do List</h1>
       <Input text={text} handleChange={handleChange} addToList={addToList} />
-      <ListItem text = {text} deleteListItem={deleteListItem} />
+      <List list={list} deleteListItem={deleteListItem} />
     </div>
   );
 }

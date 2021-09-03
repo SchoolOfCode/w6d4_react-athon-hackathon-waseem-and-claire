@@ -12,17 +12,13 @@ export Input component ✔️
 
 import React from "react";
 
-function ListItem({text, deleteListItem,}) {
-return <>
-<li>{text}</li>
-<button onClick={deleteListItem}> Delete from list</button>
-</>
-
-
+function ListItem({ text, deleteListItem }) {
+  return (
+    <>
+      <li>{text}</li>
+      <button onClick={deleteListItem}> Delete from list</button>
+    </>
+  );
 }
 
-
-
-
-
-export default ListItem
+export default ListItem;
