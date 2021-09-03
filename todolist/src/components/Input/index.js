@@ -29,16 +29,17 @@ function Input({ text, handleChange, addToList }) {
   return (
     <form>
       <input
+        id="inputBox"
         value={text}
         onChange={(e) => {
           handleChange(e.target.value);
         }}
       />
-      <button id = "addOne"
+      <button
+        class="addItem"
         onClick={(event) => {
           event.preventDefault();
           addToList(text);
-      
         }}
       >
         Add to list!
