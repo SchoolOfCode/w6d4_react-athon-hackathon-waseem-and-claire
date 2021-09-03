@@ -22,12 +22,10 @@ function List({ list, deleteListItem }) {
     <ul>
       {list.map((item, index) => {
         return (
-          <ListItem
+          <ListItem 
             index={index}
             text={item}
-            deleteListItem={deleteListItem}
-          />
-        );
+            deleteListItem={deleteListItem}/>);  
       })}
     </ul>
   );

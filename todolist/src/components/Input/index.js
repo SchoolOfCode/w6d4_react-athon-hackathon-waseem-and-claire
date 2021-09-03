@@ -34,7 +34,7 @@ function Input({ text, handleChange, addToList }) {
           handleChange(e.target.value);
         }}
       />
-      <button
+      <button id = "addOne"
         onClick={(event) => {
           event.preventDefault();
           addToList(text);

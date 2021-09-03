@@ -15,8 +15,8 @@ import React from "react";
 function ListItem({ text, deleteListItem, index }) {
   return (
     <>
-      <li>{text}</li>
-      <button
+      <li class= "theList" key = {index}>{text}</li>
+      <button class = "deleteButton" key = {index}
         onClick={()=> {
           deleteListItem(index)}}
       >

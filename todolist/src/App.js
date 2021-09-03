@@ -32,7 +32,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>To-Do List</h1>
+      <h1>My To-Do List</h1>
       <Input text={text} handleChange={handleChange} addToList={addToList} />
       <List list={list} deleteListItem={deleteListItem} />
     </div>
