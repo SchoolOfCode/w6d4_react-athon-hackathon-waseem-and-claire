@@ -17,19 +17,18 @@ color: #DFFDFF;
 
 
 
-#theList { 
+.theListItem { 
   display: flex;
   justify-content: center;
-
-
-
 }
 
 ul {
-/* padding: left 40px;
-padding: right: 10px; */
-display : flex;
-justify-content: center;
+display:flex;
+flex-direction: column;
+padding-left: 10px;
+padding-right: 40px; 
+justify-content: left;
+/* margin-left: 500px; */
 /* background-color:#68EDC6; */
 /* padding: left 40px;
 padding: right: 10px; */
@@ -40,12 +39,15 @@ padding: right: 10px; */
   border: 3px solid #FFA69E;
   background: none;
   color: black;
-  padding: 20px 40px;
-  font-size: 25px;
+  padding: 10px 10px;
+  margin-left: 40%;
+  margin-right:40%;
+  font-size: 15px;
   cursor: pointer;
   transition: all 0.5s;
   position: relative;
   overflow: hidden;
+  width: 300px;
 }
 .deleteButton:hover {
   color: #0D1321;

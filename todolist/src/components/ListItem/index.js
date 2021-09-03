@@ -15,13 +15,13 @@ import React from "react";
 function ListItem({ text, deleteListItem, index }) {
   return (
     <>
-      <li class= "theList" key = {index}>{text}</li>
+      <li class= "theListItem" key = {index}>{text}</li>
       <button class = "deleteButton" key = {index}
         onClick={()=> {
           deleteListItem(index)}}
       >
         Delete from list
-      </button>
+      </button><br/>
     </>
   );
 }
